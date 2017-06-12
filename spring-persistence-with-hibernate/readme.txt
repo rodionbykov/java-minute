@@ -1,1 +1,0 @@
-Spring Persistence with Hibernate book 2010 Apress
