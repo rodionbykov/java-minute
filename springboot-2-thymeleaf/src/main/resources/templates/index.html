@@ -3,9 +3,13 @@
     <head lang="en">
         <title>Spring MVC with SpringBoot with Thymeleaf</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
+        <!--/* reference stylesheet internally, it will be pulled by webjars and can be used in application */-->
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <p>This is first Thymeleaf template.</p>
+        <div class="container">
+            <h1>Hello World!</h1>
+            <p>This is first Thymeleaf template.</p>
+        </div>
     </body>
 </html>
