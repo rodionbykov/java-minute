@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Spring MVC with SpringBoot and Thymeleaf</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
+    <!--/* reference stylesheet internally, it will be pulled by webjars and can be used in application */-->
+</head>
+<body>
+<div class="container">
+    <h1>Users</h1>
+    <p>List of application users</p>
+</div>
+<div class="container">
+    <div th:if="${not #lists.isEmpty(applicationUsers)}">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Login</th>
+                    <th>Full name</th>
+                    <th>Access level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user : ${applicationUsers}">
+                    <td th:text="${user.ID}"></td>
+                    <td th:text="${user.Login}"></td>
+                    <td th:text="${user.FullName}"></td>
+                    <td th:text="${user.Level}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
