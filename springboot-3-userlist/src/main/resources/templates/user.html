@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Spring MVC with SpringBoot and Thymeleaf</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
+    <!--/* reference stylesheet internally, it will be pulled by webjars and can be used in application */-->
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>User</h1>
+            <p>Details of application user</p>
+            <p><a href="/users">Back to list</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <form class="form-horizontal">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label class="control-label">User ID:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <p class="form-control-static" th:text="${applicationUser.ID}">User ID</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label class="control-label">Login:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <p class="form-control-static" th:text="${applicationUser.Login}">User Login</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label class="control-label">First name:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <p class="form-control-static" th:text="${applicationUser.FirstName}">First name</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label class="control-label">Last name:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <p class="form-control-static" th:text="${applicationUser.LastName}">Last name</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                    <label class="control-label">Level:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <p class="form-control-static" th:text="${applicationUser.Level}">Level</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

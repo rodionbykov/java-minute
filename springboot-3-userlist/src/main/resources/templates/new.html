@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Spring MVC with SpringBoot and Thymeleaf</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
+    <!--/* reference stylesheet internally, it will be pulled by webjars and can be used in application */-->
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>New User</h1>
+            <p>Adding new application user</p>
+            <p><a href="/users">Back to list</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <form class="form-horizontal" th:object="${applicationUser}" th:action="@{/user}" method="post">
+                <input type="hidden" th:field="*{ID}" />
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label class="control-label">Login:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" th:field="*{login}" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label class="control-label">First name:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" th:field="*{firstName}" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label class="control-label">Last name:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" th:field="*{lastName}" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                    <label class="control-label">Level:</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" th:field="*{level}" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -4,6 +4,7 @@ import com.rodionbykov.springbootuserlist.model.ApplicationUser;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -54,4 +55,26 @@ public class ApplicationUserServiceImpl implements ApplicationUserService{
     public List<ApplicationUser> getAllApplicationUsers() {
         return applicationUsers;
     }
+
+    public ApplicationUser getApplicationUserByID(Integer id){
+        return applicationUsers.get(id);
+    }
+
+    public ApplicationUser saveOrUpdateApplicationUser(ApplicationUser applicationUser){
+        if(applicationUser != null){
+            if(applicationUser.getID() == null){
+                applicationUser.setID(getNextKey());
+            }
+            applicationUsers.add(applicationUser);
+
+            return applicationUser;
+        }else{
+            throw new RuntimeException("Application User cannot be null");
+        }
+    }
+
+    private Integer getNextKey(){
+        return applicationUsers.size();
+    }
+
 }

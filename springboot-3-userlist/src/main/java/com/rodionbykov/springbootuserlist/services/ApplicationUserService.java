@@ -8,4 +8,8 @@ public interface ApplicationUserService {
 
     List<ApplicationUser> getAllApplicationUsers();
 
+    ApplicationUser getApplicationUserByID(Integer id);
+
+    ApplicationUser saveOrUpdateApplicationUser(ApplicationUser applicationUser);
+
 }
