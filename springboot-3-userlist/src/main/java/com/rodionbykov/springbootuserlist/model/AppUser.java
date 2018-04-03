@@ -1,6 +1,6 @@
 package com.rodionbykov.springbootuserlist.model;
 
-public class ApplicationUser {
+public class AppUser {
 
     private Integer id;
     private String login;

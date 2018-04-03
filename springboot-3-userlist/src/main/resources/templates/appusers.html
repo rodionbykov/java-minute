@@ -17,7 +17,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <div th:if="${not #lists.isEmpty(applicationUsers)}">
+        <div th:if="${not #lists.isEmpty(appUsers)}">
             <table class="table table-stripped">
                 <thead>
                     <tr>
@@ -25,14 +25,16 @@
                         <th>Login</th>
                         <th>Full name</th>
                         <th>Access level</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="user : ${applicationUsers}">
-                        <td th:text="${user.ID}"></td>
-                        <td><a th:text="${user.Login}" th:href="@{/user/{id}(id=${user.ID})}"></a></td>
-                        <td th:text="${user.FullName}"></td>
-                        <td th:text="${user.Level}"></td>
+                    <tr th:each="appUser : ${appUsers}">
+                        <td th:text="${appUser.ID}"></td>
+                        <td><a th:text="${appUser.Login}" th:href="@{/users/{id}(id=${appUser.ID})}"></a></td>
+                        <td th:text="${appUser.FullName}"></td>
+                        <td th:text="${appUser.Level}"></td>
+                        <td><a th:text="Edit" th:href="@{/users/edit/{id}(id=${appUser.ID})}"></a></td>
                     </tr>
                 </tbody>
             </table>

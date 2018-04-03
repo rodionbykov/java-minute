@@ -10,9 +10,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <h1>User</h1>
+            <h1 th:text="${'User: ' + appUser.Login}"></h1>
             <p>Details of application user</p>
-            <p><a href="/users">Back to list</a></p>
+            <p><a href="/users">Back to list</a> | <a th:text="Edit" th:href="@{/users/edit/{id}(id=${appUser.ID})}"></a></p>
         </div>
     </div>
     <div class="row">
@@ -23,7 +23,7 @@
                         <label class="control-label">User ID:</label>
                     </div>
                     <div class="col-md-10">
-                        <p class="form-control-static" th:text="${applicationUser.ID}">User ID</p>
+                        <p class="form-control-static" th:text="${appUser.ID}">User ID</p>
                     </div>
                 </div>
                 <div class="row">
@@ -31,7 +31,7 @@
                         <label class="control-label">Login:</label>
                     </div>
                     <div class="col-md-10">
-                        <p class="form-control-static" th:text="${applicationUser.Login}">User Login</p>
+                        <p class="form-control-static" th:text="${appUser.Login}">User Login</p>
                     </div>
                 </div>
                 <div class="row">
@@ -39,7 +39,7 @@
                         <label class="control-label">First name:</label>
                     </div>
                     <div class="col-md-10">
-                        <p class="form-control-static" th:text="${applicationUser.FirstName}">First name</p>
+                        <p class="form-control-static" th:text="${appUser.FirstName}">First name</p>
                     </div>
                 </div>
                 <div class="row">
@@ -47,7 +47,7 @@
                         <label class="control-label">Last name:</label>
                     </div>
                     <div class="col-md-10">
-                        <p class="form-control-static" th:text="${applicationUser.LastName}">Last name</p>
+                        <p class="form-control-static" th:text="${appUser.LastName}">Last name</p>
                     </div>
                 </div>
                 <div class="row">
@@ -55,7 +55,7 @@
                     <label class="control-label">Level:</label>
                     </div>
                     <div class="col-md-10">
-                        <p class="form-control-static" th:text="${applicationUser.Level}">Level</p>
+                        <p class="form-control-static" th:text="${appUser.Level}">Level</p>
                     </div>
                 </div>
             </form>
