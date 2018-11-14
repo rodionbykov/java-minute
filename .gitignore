@@ -1,5 +1,8 @@
 *.project
 *.classpath
 *.iml
-*/.idea/
-*/out/
+out
+.idea
+.gradle
+target
+WEB-INF
