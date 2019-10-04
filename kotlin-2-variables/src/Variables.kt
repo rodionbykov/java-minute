@@ -1,12 +1,17 @@
 fun main(args:Array<String>){
+
+    // numbers
     var i:Int = 64
+    var l:Long = 2384723L
     var f:Float = 3.1415f
-    var d:Double = 3.1415e10
+    var d:Double = 3.1415e10 // or just 123.45
 
     println(i)
+    println(l)
     println(f)
     println(d)
 
+    // ranges
     var ira:IntRange = 1..10
     var irb:IntRange = 1.rangeTo(10)
     var er:IntRange = 10..1
@@ -18,5 +23,43 @@ fun main(args:Array<String>){
     for(x in er) println(x) // nothing
     for(x in ipa) println(x) // 10 to 1
     for(x in ipb) println(x) // 100 to 5
+
+    // arrays
+    var names: Array<String> = arrayOf("Joshua", "Jane", "Jack")
+    println(names[0]) // Joshua
+    names[2] = "John"
+    println(names[2]) // John
+    println(names.toList()) // Joshua, Jane, Jack
+
+    var numbers: IntArray = intArrayOf(3, 210, 44)
+    println(numbers[0])
+    println(numbers.toList()); // 3, 210, 44
+
+    // characters
+    var c:Char = 'a' // it should be single quotes
+    var nc:Char = '\u0061'
+    println(c)
+    println(nc)
+    println(c == nc)
+
+    // strings
+    var s: String = "This is one-line string"
+    var raw: String = """ some
+weird multiline ~~~ 
+        string
+    """
+    var trimmed_raw: String = """
+        |this
+        | will be 
+        |trimmed down
+    """.trimMargin() // margin marked by pipe symbol by default
+
+    println(s)
+    println(raw)
+    println(trimmed_raw)
+
+    var price: Double = 25.99
+    var price_label: String = "Today's price: ${'$'}${price}" // dollar sign has to be inserted as character
+    println(price_label)
 
 }
