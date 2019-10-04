@@ -1,5 +1,14 @@
 fun main(args:Array<String>){
 
+    // constant
+    val PI: Double = 3.1415
+
+    // variable
+    var circumference: Double = 0.0
+    circumference = PI * 5
+    println(PI);
+    println(circumference);
+
     // numbers
     var i:Int = 64
     var l:Long = 2384723L
@@ -58,8 +67,23 @@ weird multiline ~~~
     println(raw)
     println(trimmed_raw)
 
+    // string templates
     var price: Double = 25.99
     var price_label: String = "Today's price: ${'$'}${price}" // dollar sign has to be inserted as character
     println(price_label)
+
+    // null values
+    var nullable_string: String? = null // String is not nullable, but String? is
+    var len: Int? = nullable_string?.length
+    println(len)
+    nullable_string = "Hello World"
+    len = nullable_string.length
+    println(len)
+    println(nullable_string!!.length) // turning off nullability, not recommended
+
+    // flow typing - change type depending on flow
+    if(nullable_string != null){
+        println(nullable_string.length) // in this block nullability is also turned off
+    }
 
 }
