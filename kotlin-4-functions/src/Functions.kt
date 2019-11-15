@@ -43,7 +43,7 @@ fun squareEquationWithClosure(a : Double, b : Double, c : Double) : Pair<Double,
     return Pair(solution1, solution2)
 }
 
-// custom infix function
+// extension function with infix notation
 infix fun Double.addTwice(secondOperand : Double) : Double{
     return this + secondOperand * 2
 }
