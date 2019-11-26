@@ -12,4 +12,8 @@ class Person {
     var salary : Double = 0.0
         get() { return field / 100 }
         set(value) { field = value * 100 }
+
+    // lateinit vars doesn't need to have initial value
+    lateinit var address :String
+
 }
