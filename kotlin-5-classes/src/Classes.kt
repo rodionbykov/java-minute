@@ -26,4 +26,20 @@ fun main(args: Array<String>){
     println("Cat has name of ${cat.name}")
     println("Cat is ${cat.age} years old")
 
+    var human = Human("John", 52)
+    println(human.toString())
+
+    var human2 = human.copy()
+    println(human2.toString())
+
+    // compare for equality
+    println(human2.equals(human))
+
+    // compare for referential equality
+    println(human === human2)
+
+    // destructuring - unpacking values from object into distinct variables
+    var (humanName, humanAge) = human
+    println("Name is $humanName and age is $humanAge")
+
 }
