@@ -9,11 +9,11 @@ fun main(args: Array<String>){
     bob.age = 32
     bob.salary = 60000.00
 
-    println("User name is ${bob.name}, he's ${bob.age}, and earning ${bob.salary}")
+    println("User name is ${bob.name}, ${bob.age}, earning ${bob.salary}")
 
     // adding extension function to class Person
     fun Person.about(){
-        println("User name is ${this.name}, he's ${this.age}, and earning ${this.salary}")
+        println("User name is ${this.name}, ${this.age}, earning ${this.salary}")
     }
     // calling freshly added function
     bob.about();
@@ -41,5 +41,9 @@ fun main(args: Array<String>){
     // destructuring - unpacking values from object into distinct variables
     var (humanName, humanAge) = human
     println("Name is $humanName and age is $humanAge")
+
+    // build new Person using PersonFactory singleton
+    var alice = PersonFactory.makePerson("Alice", 36, 100000.0)
+    alice.about()
 
 }
