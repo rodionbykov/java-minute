@@ -46,4 +46,10 @@ fun main(args: Array<String>){
     var alice = PersonFactory.makePerson("Alice", 36, 100000.0)
     alice.about()
 
+    var animal1 = Animal.Factory.create("Alice")
+    var animal2 = Animal.create("Bob") // can omit companion object name
+
+    println(animal1)
+    println(animal2)
+
 }
