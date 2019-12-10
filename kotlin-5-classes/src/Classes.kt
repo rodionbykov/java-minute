@@ -46,6 +46,12 @@ fun main(args: Array<String>){
     var alice = PersonFactory.makePerson("Alice", 36, 100000.0)
     alice.about()
 
+    var animal1 = Animal.Factory.create("Alice")
+    var animal2 = Animal.create("Bob") // can omit companion object name
+
+    println(animal1)
+    println(animal2)
+
     var employee = Employee("James", 42, 120000.0, "Manager")
     employee.about() // no matter of Person extension function
     println("Employee name is ${employee.name}, ${employee.age}, earning ${employee.salary} as a ${employee.position}")
