@@ -46,4 +46,8 @@ fun main(args: Array<String>){
     var alice = PersonFactory.makePerson("Alice", 36, 100000.0)
     alice.about()
 
+    var employee = Employee("James", 42, 120000.0, "Manager")
+    employee.about() // no matter of Person extension function
+    println("Employee name is ${employee.name}, ${employee.age}, earning ${employee.salary} as a ${employee.position}")
+
 }
