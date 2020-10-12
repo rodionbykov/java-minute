@@ -20,5 +20,26 @@ public class Main {
             }
         }
 
+        String[] family = {"Homer", "Marge", "Bart", "Lisa", "Maggie"};
+
+        System.out.println(family[0]);
+
+        for (Integer i = 0; i < 5; i++){
+            System.out.println(family[i]);
+        }
+
+        Integer j = 4;
+        while(j >= 0){
+            System.out.println(family[j]);
+            j--;
+        }
+
+        Integer k = 0;
+        do{
+            System.out.println(family[k]);
+            k++;
+        }while(k < 5);
+    
+
     }
 }

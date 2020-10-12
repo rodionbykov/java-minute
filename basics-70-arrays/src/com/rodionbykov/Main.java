@@ -27,5 +27,12 @@ public class Main {
         // number of elements of the array
         System.out.println(myArray1.length);
         System.out.println(myArray2.length);
+
+        Integer[] streetHouse = {23, 25, 27, 29, 31};
+
+        Double[] height = {1.30, 1.55, 1.83};
+
+        Character[] word = {'A', 'l', 'y', 'x'};
+
     }
 }
